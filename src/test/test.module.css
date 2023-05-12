@@ -1,0 +1,90 @@
+.main
+{
+    background-color: rgb(76, 76, 228);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.time
+{
+    color: white;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing:3px;
+   
+
+}
+.question_card
+{
+   
+    height: 80vh;
+    width: 50%;
+   
+}
+.cardbox
+{    background-color: rgba(28, 26, 26, 0.829);
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
+}
+.cardbox div:nth-of-type(1)
+{
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cardbox  div:nth-of-type(2)
+{
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.cardbox  div:nth-of-type(2) section
+{
+    background-color: rgba(90, 88, 88, 0.363);
+    height: 50px;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+
+}
+
+.cardbox  div:nth-of-type(2) section p
+{
+  color: white;
+ padding-left: 10px;
+}
+
+.cardbox  div:nth-of-type(3)
+{
+
+ display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cardbox  div:nth-of-type(3) button
+{
+  background-color: rgb(8, 107, 220);
+  height: 40px;
+  width: 150px;
+  outline:none;
+  border-color: transparent;
+  border-radius: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+}

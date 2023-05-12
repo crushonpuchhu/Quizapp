@@ -1,0 +1,102 @@
+
+.main
+{
+    
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.top_box
+{
+    background-color: rgb(23, 55, 119);
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.top_box h1
+{
+    letter-spacing: 8px;
+    font-size: 38px;
+    
+    
+    
+}
+.bottom_box
+{
+    background-color: rgb(249, 255, 249);
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.bottom_box_inside
+{
+    background-color:  rgb(35, 74, 152);
+    height: 17rem;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+
+}
+.quiz_info
+{
+    /* background-color: yellow; */
+    list-style: none;
+    width: 70%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.quiz_info li
+{
+    
+    height: 30px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.quiz_info li i
+{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    font-size: 24px;
+}
+
+
+.start_btn
+{
+    background-color: rgb(255, 255, 255);
+    height: 45px;
+    width: 170px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(65, 65, 225);
+    font-weight: 700;
+    cursor: pointer;
+}
+.start_btn div
+{
+   
+  font-size:30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
