@@ -1,110 +1,83 @@
-import React, { useState } from 'react'
-import css from './test.module.css'
-
-
-function Qusetion_paper({data,fun,qustionnummber})
- {
-
-      const clik=()=>
-      {
-                           
-        if(qustionnummber<3)
-        {
-           fun((p)=>p+1)
-        }
-        else
-        {
-           window.confirm("Are you sure!");
-        }
-
-       }
-
-
-
-    return (
-        <>
-            <nav className={css.cardbox}>
-
-                <div className={css.question_list}>
-                    <h2>{data.question}</h2>
-                </div>
-
-                <div className={css.option_area}>
-
-                    <section className={css.options_box}>
-                        <input name='answer' value={data.option[0]} type="radio" />
-                        <p>{data.option[0]}</p>
-                    </section>
-                    <section className={css.options_box}>
-                        <input name='answer' value={data.option[1]} type="radio" />
-                        <p>{data.option[1]}</p>
-                    </section>
-                    <section className={css.options_box}>
-                        <input name='answer' value={data.option[2]} type="radio" />
-                        <p>{data.option[2]}</p>
-                    </section>
-                    <section className={css.options_box}>
-                        <input name='answer'value={data.option[3]} type="radio" />
-                        <p>{data.option[3]}</p>
-                    </section>
-
-
-                </div>
-
-                <div className={css.btn_area}>
-                    <button onClick={clik}>Next</button>
-                </div>
-
-            </nav>
-        </>
-    )
-}
-
-
-
-
+import React, { useEffect, useState } from "react";
+import css from "./test.module.css";
+import Qusetion from "../component/qustion/Qustion";
 
 const Test = () => {
+  const [qustionChange, setQustionChange] = useState(0);
+  const [Timeup, setTimeup] = useState(false);
 
-    const [qustion_change,set_qustion_change]=useState(0);
+  const qustionQata = [
+    {
+      question: "?1:-what is next value after 10",
+      option: ["9", "11", "8", "5"],
+      correctans: "11",
+    },
+    {
+      question: "?2:-what is next value after 12",
+      option: ["13", "12", "8", "5"],
+      correctans: "13",
+    },
+    {
+      question: "?3:-what is next value after 17",
+      option: ["9", "11", "18", "5"],
+      correctans: "18",
+    },
+    {
+      question: "?4:-what is next value after 20",
+      option: ["9", "11", "8", "21"],
+      correctans: "21",
+    },
+    {
+      question: "?5:-what is next value after 70",
+      option: ["9", "11", "8", "71"],
+      correctans: "71",
+    },
+  ];
 
-    const qustion_data = [{
-        question: "?1:-what is next value after 10",
-        option: ["9", "11", "8", "5"],
-        correctans: "11"
-    }, {
-        question: "?2:-what is next value after 12",
-        option: ["13", "12", "8", "5"],
-        correctans: "13"
-    }, {
-        question: "?3:-what is next value after 17",
-        option: ["9", "11", "18", "5"],
-        correctans: "18"
-    }, {
-        question: "?4:-what is next value after 20",
-        option: ["9", "11", "8", "21"],
-        correctans: "21"
-    }]
+  const [timer, setTimer] = useState(60);
+  const [timer2, setTimer2] = useState(10);
 
-    return (
-        <>
-            <div className={css.main}>
-                <header className={css.time}>
-                    <h1>10:00</h1>
-                </header>
+  useEffect(() => {
+    const time = setInterval(() => {
+      if (timer > 0) {
+        setTimer((p) => p - 1);
+      } else {
+        if (timer2 > 0) {
+          setTimer(60);
+          setTimer2((p) => p - 1);
+        } else {
+          setTimeup(true);
+        }
+      }
+    }, 1000);
 
-                <footer className={css.question_card}>
+    return () => {
+      clearInterval(time);
+    };
+  });
 
-                <Qusetion_paper data={qustion_data[qustion_change] } fun={set_qustion_change} qustionnummber={qustion_change} />
+  return (
+    <>
+      <div className={css.main}>
+        <header className={css.time}>
+          <h1>
+            {timer2 >= 10 ? null : "0"}
+            {timer2}:{timer >= 10 ? null : "0"}
+            {timer}
+          </h1>
+        </header>
 
-                </footer>
+        <footer className={css.question_card}>
+          <Qusetion
+            data={qustionQata[qustionChange]}
+            fun={setQustionChange}
+            qustionnummber={qustionChange}
+            timeupp={Timeup}
+          />
+        </footer>
+      </div>
+    </>
+  );
+};
 
-
-
-            </div>
-        </>
-    )
-}
-
-export default Test
-
+export default Test;

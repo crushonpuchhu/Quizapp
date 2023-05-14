@@ -72,33 +72,24 @@
   color: white;
   cursor: pointer;
 }
-@media only screen and (max-width: 376px) {
-  .question_card {
-    height: 75vh;
-    width: 90%;
-  }
-}
+
 @media only screen and (max-width: 415px) {
-  .question_card {
-    height: 75vh;
-    width: 90%;
+  .cardbox div:nth-of-type(2) section {
+    width: 50%;
+  }
+  .cardbox div:nth-of-type(2) section p {
+    font-size: 20px;
   }
 }
-@media only screen and (max-width: 821px) {
-  .question_card {
-    height: 75vh;
-    width: 90%;
-  }
-}
-@media only screen and (max-width: 913px) {
-  .question_card {
-    height: 75vh;
-    width: 90%;
-  }
-}
+
 @media only screen and (max-width: 281px) {
-  .question_card {
-    height: 75vh;
-    width: 100%;
+  .cardbox div:nth-of-type(2) section {
+    width: 40%;
+  }
+  .cardbox div:nth-of-type(2) section p {
+    font-size: 17px;
+  }
+  .cardbox div:nth-of-type(1) {
+    font-size: 12px;
   }
 }

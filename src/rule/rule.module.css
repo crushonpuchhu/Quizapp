@@ -1,100 +1,80 @@
-.main
-{
-    background-color: rgba(35, 74, 152, 0.738);
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.main {
+  background-color: rgba(35, 74, 152, 0.738);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.card
-{
-    background-color: rgb(35, 34, 34);
-    height:500px;
-    width: 500px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.7fr 4fr 1fr;
-    border-radius: 10px;
+.card {
+  background-color: rgb(35, 34, 34);
+  height: 500px;
+  width: 500px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.7fr 4fr 1fr;
+  border-radius: 10px;
 }
-.card div:nth-of-type(1)
-{
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    letter-spacing: 1px;
-    
+.card div:nth-of-type(1) {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 1px;
 }
-.card div:nth-of-type(2)
-{
-  
-    display: flex;
-    flex-direction: column;
-    align-items: center;
- 
-   
+.card div:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.card div:nth-of-type(3)
-{
-   
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.card div:nth-of-type(3) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.final_start
-{
-    background-color: white;
-    outline: none;
-    border-color: transparent;
-    height: 35px;
-    width: 130px;
-    border-radius: 10px;
-    font-size: 15px;
-    letter-spacing: 2px;
-    font-weight: 700;
-    cursor: pointer;
+.final_start {
+  background-color: white;
+  outline: none;
+  border-color: transparent;
+  height: 35px;
+  width: 130px;
+  border-radius: 10px;
+  font-size: 15px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  cursor: pointer;
 }
-.list_of_rules
-{
-    background-color: rgba(59, 59, 57, 0.566);
-    height: 60px;
-    width: 350px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    border-radius: 10px;
+.list_of_rules {
+  background-color: rgba(59, 59, 57, 0.566);
+  height: 60px;
+  width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 10px;
 }
-.list_of_rules i
-{
-   
-    height: 45px;
-    width: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 35px;
-   
+.list_of_rules i {
+  height: 45px;
+  width: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
 }
 
-.list_of_rules div
-{  
-    height: 55px;
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.list_of_rules div {
+  height: 55px;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.list_of_rules div p{
-    
-    width: 90%;
-    height: 22px;
-    font-weight: 700;
-  
+.list_of_rules div p {
+  width: 90%;
+  height: 22px;
+  font-weight: 700;
 }
-.list_of_rules div h6
-{
-    
-    width: 90%;
+.list_of_rules div h6 {
+  width: 90%;
 }
