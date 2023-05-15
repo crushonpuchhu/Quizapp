@@ -4,10 +4,20 @@ import { useNavigate } from "react-router-dom";
 
 function Qusetion({ data, fun, qustionnummber, timeupp }) {
   const [count, setCount] = useState([]);
+  const [cheak1, setCheak1] = useState(false);
+  const [cheak2, setCheak2] = useState(false);
+  const [cheak3, setCheak3] = useState(false);
+  const [cheak4, setCheak4] = useState(false);
 
   const ScorePage = useNavigate();
 
   const clik = () => {
+
+     setCheak1(false);
+     setCheak2(false);
+     setCheak3(false);
+     setCheak4(false);
+
     if (qustionnummber < 4) {
       fun((p) => p + 1);
     } else {
@@ -24,6 +34,7 @@ function Qusetion({ data, fun, qustionnummber, timeupp }) {
         ScorePage("/End_test/" + da);
       }, 1000);
     }
+
   };
 
   if (timeupp) {
@@ -49,6 +60,8 @@ function Qusetion({ data, fun, qustionnummber, timeupp }) {
     }, 1000);
   }
 
+   
+
   return (
     <>
       <nav className={css.cardbox}>
@@ -59,8 +72,12 @@ function Qusetion({ data, fun, qustionnummber, timeupp }) {
         <div className={css.option_area}>
           <section className={css.options_box}>
             <input
+              checked={cheak1}
+             
               onChange={(e) => {
                 setCount([...count, e.target.value]);
+                setCheak1(true)
+                
               }}
               name="answer"
               value={data.option[0]}
@@ -71,8 +88,11 @@ function Qusetion({ data, fun, qustionnummber, timeupp }) {
 
           <section className={css.options_box}>
             <input
+              checked={cheak2}
               onChange={(e) => {
                 setCount([...count, e.target.value]);
+                setCheak2(true)
+                
               }}
               name="answer"
               value={data.option[1]}
@@ -83,8 +103,11 @@ function Qusetion({ data, fun, qustionnummber, timeupp }) {
 
           <section className={css.options_box}>
             <input
+              checked={cheak3}
               onChange={(e) => {
                 setCount([...count, e.target.value]);
+                setCheak3(true)
+              
               }}
               name="answer"
               value={data.option[2]}
@@ -95,8 +118,11 @@ function Qusetion({ data, fun, qustionnummber, timeupp }) {
 
           <section className={css.options_box}>
             <input
+               checked={cheak4}
               onChange={(e) => {
                 setCount([...count, e.target.value]);
+                setCheak4(true)
+                
               }}
               name="answer"
               value={data.option[3]}
