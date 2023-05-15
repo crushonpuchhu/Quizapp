@@ -35,7 +35,7 @@ const Test = () => {
   ];
 
   const [timer, setTimer] = useState(60);
-  const [timer2, setTimer2] = useState(0);
+  const [timer2, setTimer2] = useState(9);
 
   useEffect(() => {
     const time = setInterval(() => {
